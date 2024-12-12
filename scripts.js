@@ -22,7 +22,7 @@ async function summarizeText() {
         'Authorization': `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        model: 'text-davinci-003',
+        model: 'gpt-3.5-turbo',
         prompt: `Summarize the following text:\n\n${textInput}`,
         max_tokens: 200
       })
