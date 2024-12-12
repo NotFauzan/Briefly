@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefly.Ai</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">Briefly.Ai</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- Main Section -->
+  <main>
+    <section class="main">
+      <div class="main-content">
+        <h1>Briefly | Ai Book Summarizer</h1>
+        <p>Summarize those lengthy books in just few seconds!</p>
+        <button class="btn-5 custom-btn" onclick="showInputForm()">Get Started</button>
+      </div>
+    </section>
+    <hr>
+
+    
+
+    <!-- Form Section -->
+    <section class="input-form" id="inputForm" style="display: none;">
+      <h2>Summarize Your Text</h2>
+      <p>Paste your text or upload a document, and our AI will summarize it for you.</p>
+      <textarea id="textInput" placeholder="Paste your content here..." rows="10"></textarea>
+      <div class="upload-section">
+        <input type="file" id="fileInput" accept=".txt,.pdf,.docx" />
+        <label for="fileInput" class="upload-label">Upload Document</label>
+      </div>
+      <button class="btn" onclick="summarizeText()">Summarize<span></span></button>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result-section" id="resultSection" style="display: none;">
+      <h2>Original Text & Summary</h2>
+      <div class="results">
+        <div class="original-text">
+          <h3>Original Text</h3>
+          <p id="originalText"></p>
+        </div>
+        <div class="summary-text">
+          <h3>Summary</h3>
+          <p id="summaryText"></p>
+        </div>
+      </div>
+      <button class="cta-button" onclick="showInputForm()">Summarize Another</button>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <h4>Made with ♥︎ By Fauzan</h4>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+</body>
+</html>
